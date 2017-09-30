@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd `dirname $0`
+if [[ `pwd` == *crypto_trader ]]
+then
+    cd_path=`pwd`
+else
+    cd_path=`pwd`/crypto_trader
+fi
+cd $cd_path
+ruby `pwd`/trader.rb "$@"
